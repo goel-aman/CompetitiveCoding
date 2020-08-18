@@ -1,6 +1,8 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 #define ll long long int
+
 
 int main(){
     ll n;
@@ -18,3 +20,8 @@ int main(){
     }
     cout<<answer_array[n-1]<<endl;
 }
+
+
+// Time Complexity   O(n)
+
+// space complexity  O(n)
