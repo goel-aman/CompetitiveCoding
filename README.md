@@ -1,0 +1,1 @@
+code of problem solved on various platforms.
