@@ -14,6 +14,7 @@ bool game_strip(ll* a,ll &n,bool chance,unordered_map<bool,bool> isfirst,unorder
                 if(w == false){
                     return true;
                 }
+                umpos[chance] = i;
                 a[i] = 0;
             }
         }
@@ -39,17 +40,13 @@ bool game_strip(ll* a,ll &n,bool chance,unordered_map<bool,bool> isfirst,unorder
         if(k == false){
             return true;
         }
+        umpos[chance] = w;
+        a[w - 1] = 0;
     }
     return false;
 }
 //8
 //1 0 1 1 1 0 0 1
-
-
-5
-1 0 0 0 1
-
-
 
 int main(){
     ll t;
