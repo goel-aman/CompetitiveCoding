@@ -4,4 +4,4 @@ def funct(m):
 
 if __name__ == "__main__":
     s = 4
-    print(funct(8))
+    print(1<<0)
