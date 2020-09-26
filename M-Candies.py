@@ -11,7 +11,7 @@ def func(index,k,input_array,n):
         return dp[index][k]
     
     
-    summ =0
+    summ=0
     for i in range(0,min(k,input_array[index]) + 1):
         summ = (summ +  func(index + 1, k - i,input_array,n)) % mod
     dp[index][k] = summ % mod
@@ -27,5 +27,5 @@ if __name__ == "__main__":
     input_array = list(map(int,input().split()))
     mod = 1000000007
     ans = answer(n,k,input_array)
-    print(ans)
+    print(ans % mod)
     
