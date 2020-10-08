@@ -43,13 +43,7 @@ int main(){
         ll target;
         cin>>n>>target;
         memset(dp,-1,sizeof(dp));
-        // for(int i=0;i<101;i++){
-        //     for(int j=0;j<2;j++){
-        //         for(int k=0;k<101;k++){
-        //             dp[i][j][k] = -1;
-        //         }
-        //     }
-        // }
+
         ll ans = funct(0,n,0,0,target);
         cout<<ans%mod<<endl;
     }
