@@ -5,8 +5,7 @@ using namespace std;
 
 int main()
 {
-    string s;
-    int k = 5;
-    s.push_back(5);
-    cout<<s<<endl;
+    string s1 = to_string('2');
+    cout<<s1<<endl;
+    return 0;
 }
