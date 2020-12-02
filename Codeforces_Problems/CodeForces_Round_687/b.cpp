@@ -2,43 +2,30 @@
 using namespace std;
 #define ll long long int
 
-
-
-ll solve(ll arr[],ll n,ll k,set<ll> s){
-    ll ans = LONG_MAX;
-    // ll days = 0;
-    for(auto val : s){
-        ll i = 0;
-        ll days = 0;
-        while(i<n){
-            if(arr[i] == val){
-               i++;
-               continue; 
-            }
-            days++;
-            i = i + k;
-        }
-        if(days < ans){
-            ans = days;
-        }
+ll solve(ll n){
+    if(n == 0){
+        return 0;
     }
-    return ans;
+    ll i = 1;
+    while( (i*(i+1)/2) < n ){
+        i++;
+    }
+
+    ll day = ((i*(i + 1) )/ 2);
+    if(n == day - 1){
+        return i + 1;
+    }
+    return i;
+    
 }
 
 int main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    ll t;cin>>t;
+    ll t;
+    cin>>t;
     while(t--){
-        ll n,k;
-        cin>>n>>k;
-        ll arr[n];
-        set<ll> s;
-        for(ll i=0;i<n;i++){
-            cin>>arr[i];
-            s.insert(arr[i]);
-        }
-        cout<<solve(arr,n,k,s)<<endl;
+        ll n;
+        cin>>n;
+        cout<<solve(n)<<endl;
     }
     return 0;
 }
