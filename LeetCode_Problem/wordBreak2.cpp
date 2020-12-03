@@ -1,3 +1,5 @@
+#include<bits/stdc++.h>
+using namespace std;cd 
 class Solution {
     unordered_map<string,bool> um;
     unordered_map<string,vector<string>> umm;
