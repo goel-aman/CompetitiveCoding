@@ -1,57 +1,119 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int maximumAreaHistogram(vector<int> v){
-    int length = v.size();
-    int max_area = 0;
-    int rb[length];
-    rb[length - 1] = length;
-    stack<int> s;
-    s.push(length - 1);
-    for(int i=length - 2;i>=0;i--){
-        while(!s.empty() && v[i] <= v[s.top()]){
-            s.pop();
+class Solution
+{
+public:
+    
+
+    int minCut(string s)
+    {
+        
+        int slength = s.length();
+        bool matrix[slength][slength];
+        memset(matrix,0,sizeof(matrix));
+        int i = 0;
+        int m, n;
+        m = 0;
+        n = i;
+        while (m < slength && n < slength)
+        {
+            matrix[m][n] = true;
+            m++;
+            n++;
         }
-        if(s.empty()){
-            rb[i] = length;
+        m = 0;
+        n = 1;
+        while (m < slength && n < slength)
+        {
+            if (s[m] == s[n])
+            {
+                matrix[m][n] = true;
+            }
+            else
+            {
+                matrix[m][n] = false;
+            }
+            m++;
+            n++;
         }
-        else{
-            rb[i] = s.top();
+
+        for (int i = 2; i < slength; i++)
+        {
+            int m, n;
+            // m denotes row
+            // n denotes column;
+            m = 0;
+            n = i;
+            while (m < slength && n < slength)
+            {
+                if (s[m] == s[n])
+                {
+                    matrix[m][n] = matrix[m + 1][n - 1];
+                }
+                else
+                {
+                    matrix[m][n] = false;
+                }
+                m++;
+                n++;
+            }
+            
         }
-        s.push(i);
+        cout<<"Start of matrix"<<endl;
+        for(int i=0;i<slength;i++){
+            for(int j=0;j<slength;j++){
+                cout<<matrix[i][j]<<" ";
+            }
+            cout<<endl;
+        }
+        cout<<"end of matrix"<<endl;
+        
+        if (slength == 0 || slength == 1)
+        {
+            return 0;
+        }
+
+        if (matrix[0][slength - 1])
+        {
+            return 0;
+        }
+
+        int arr[slength];
+        arr[0] = 0;
+        for (int j = 1; j < slength ; j++){
+            int ans = INT_MAX;
+            int val = 0;
+            for (int i = j; i >= 0  ; i--){
+                string substr = s.substr(i,j-i+1);
+                if (matrix[i][i + (j - i + 1) - 1]){
+                    if(i == 0){
+                        arr[j] = 0;
+                        val = 1;
+                        break;
+                    }
+                    else{
+                        ans = min(ans,arr[i -1]);
+                    }
+                }
+            }
+            if(val == 1){
+                arr[j] = 0;
+                continue;
+            }
+            arr[j] = ans + 1;
+        }
+        for(int i=0;i<slength;i++){
+            cout<<arr[i]<<' ';
+        }
+        cout<<endl;
+        return arr[slength - 1];
     }
-
-    while(!s.empty()){
-        s.pop();
-    }
-
-    int lb[length];
-    lb[0] = -1;
-    s.push(0);
-    for(int i =1;i<length;i++){
-        while(!s.empty() && v[i] <= v[s.top()]){
-            s.pop();
-        }
-        if(s.empty()){
-            lb[i] = -1;
-        }
-        else{
-            lb[i] = s.top();
-        }
-        s.push(i);
-    }
+};
 
 
-    for(int i=0;i<length;i++){
-        int area_temp = v[i] * (rb[i] - lb[i] - 1);
-        if(area_temp > max_area){
-            max_area = area_temp;
-        }
-    }
-    return max_area;
-}
-
-int main(){
-    vector<int> v = {4 ,7, 6, 4, 3, 16, 16, 4 ,16 ,5 ,6 ,16 ,13 ,12, 3 ,7 ,16 ,0 ,8 };
-    cout<<maximumAreaHistogram(v)<<endl;
+int main()
+{
+    Solution a;
+    cout<<a.minCut("cabababcbc")<<endl;
 }
