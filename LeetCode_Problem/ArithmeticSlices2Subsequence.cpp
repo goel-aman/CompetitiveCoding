@@ -34,3 +34,32 @@
 // [4,6,8,10]
 // [2,4,6,8,10]
 // [2,6,10]
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+class Solution {
+public:
+
+    int numberOfArithmeticSlices(vector<int>& A) {
+        long long int length = A.size();
+        long long int ans = 0;
+        unordered_map<long long int,long long int> * um = new unordered_map<long long int,long long int>[length];
+        for(long long int i=1;i<length;i++){
+            for(long long int j = i - 1 ;j>=0;j--){
+                long long int diff = (long long int)A[i] - (long long int)A[j];
+                if(um[j].count(diff) > 0)
+                {
+                    ans += um[j][diff];
+                    um[i][diff] += um[j][diff] + 1;
+                }
+                else{
+                    um[i][diff]++;
+                }
+            }
+        }
+        return (int)ans;
+    }
+};
