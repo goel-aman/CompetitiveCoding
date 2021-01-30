@@ -4,7 +4,8 @@ https://atcoder.jp/contests/dp/tasks/dp_q
 
 
 /* Based On Union Find Algorithm */ 
-https://leetcode.com/problems/accounts-merge/     
+https://leetcode.com/problems/accounts-merge/ 
+https://leetcode.com/problems/regions-cut-by-slashes/ 
 
 
 
