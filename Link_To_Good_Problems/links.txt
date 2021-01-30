@@ -13,6 +13,11 @@ https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/
 
 
 
+/* Good Math / Problem Solving Based Problem */ 
+https://leetcode.com/problems/minimize-deviation-in-array/
+
+
+
 /* Unknown Topics */
 https://leetcode.com/problems/word-break/
 https://leetcode.com/problems/first-missing-positive/
