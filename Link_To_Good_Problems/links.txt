@@ -10,6 +10,7 @@ https://leetcode.com/problems/accounts-merge/
 
 /* Graph Problem */
 https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/
+https://leetcode.com/problems/as-far-from-land-as-possible/submissions/
 
 
 
