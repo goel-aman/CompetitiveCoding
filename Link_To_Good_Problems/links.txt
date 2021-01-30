@@ -2,9 +2,14 @@
 https://atcoder.jp/contests/dp/tasks/dp_q
 
 
+
 /* Based On Union Find Algorithm */ 
 https://leetcode.com/problems/accounts-merge/     
 
+
+
+/* Graph Problem */
+https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/
 
 
 
