@@ -40,7 +40,8 @@
 // xi != yi
 // Every garden has at most 3 paths coming into or leaving it.
 
-
+#include<bits/stdc++.h>
+using namespace std;
 
 class Solution {
     unordered_map<int,vector<int>> um;
