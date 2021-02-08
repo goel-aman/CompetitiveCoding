@@ -42,7 +42,70 @@ using namespace std;
 class Solution {
     unordered_map<int,vector<int>> um;
 public:
+    void isPossible(vector<int> &visited,int source,stack<int> &Stack){
+        visited[source] = 1;
+        for(auto x : um[source]){
+            if(!visited[x]){
+                isPossible(visited,x,Stack);
+            }
+        }
+        Stack.push(source);
+    }
+
+    bool detectCycle(vector<int> &visited,int source){
+        visited[source] = 1;
+        for(auto x : um[source]){
+            if(visited[x] == 0){
+                bool cycledetect = detectCycle(visited,x);
+                if(cycledetect == true){
+                    return true;
+                }
+                continue;
+            }
+            
+            if(visited[x] == 2){
+                continue;
+            }
+
+            if(visited[x] == 1){
+                return true;
+            }
+        }
+        visited[source] = 2;
+        return false;
+    }
+
     vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
-        
+        for(auto var : prerequisites){
+            um[var[1]].push_back(var[0]);
+        }
+
+        int n = numCourses;
+        vector<int> visited(n ,0);
+        for(int i=0;i<n;i++){
+            if(visited[i] == 0){
+                bool ans = detectCycle(visited,i);
+                if(ans == true){
+                    vector<int> answer;
+                    return answer;
+                }
+            }
+        }
+        for(int i=0;i<n;i++){
+            visited[i] = 0;
+        }
+        stack<int> Stack;
+        for(int i=0;i<n;i++){
+            if(visited[i] == 0){
+                isPossible(visited,i,Stack);
+            }
+        }
+        vector<int> anss;
+        while(!Stack.empty()){
+            int val = Stack.top();
+            Stack.pop();
+            anss.push_back(val);
+        }
+        return anss;
     }
 };
