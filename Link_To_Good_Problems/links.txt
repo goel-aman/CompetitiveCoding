@@ -12,6 +12,8 @@ https://leetcode.com/problems/regions-cut-by-slashes/
 /* Graph Problem */
 https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/
 https://leetcode.com/problems/as-far-from-land-as-possible/submissions/
+https://leetcode.com/problems/reconstruct-itinerary/
+https://leetcode.com/problems/clone-graph/
 
 
 /* Based On Floyd Warshall Algorithm */
