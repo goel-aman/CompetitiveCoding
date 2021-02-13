@@ -3,6 +3,8 @@ using namespace std;
 #define ll long long int
 
 int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     ll t;
     cin>>t;
     while(t--){
@@ -10,9 +12,12 @@ int main(){
         ll n;
         cin>>n;
         ll state = 0;
-        while(n--){
-            string s;
-            cin>>s;
+        string arr[n];
+        for(int i=0;i<n;i++){
+            cin>>arr[i];
+        }
+        for(int i=0;i<n;i++){
+            string s = arr[i];
             if(s == "start"){
                 state = 1;
                 continue;
