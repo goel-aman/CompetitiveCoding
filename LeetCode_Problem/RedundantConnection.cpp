@@ -2,7 +2,9 @@
 
 // In this problem, a tree is an undirected graph that is connected and has no cycles.
 
-// The given input is a graph that started as a tree with N nodes (with distinct values 1, 2, ..., N), with one additional edge added. The added edge has two different vertices chosen from 1 to N, and was not an edge that already existed.
+// The given input is a graph that started as a tree with N nodes (with distinct 
+// values 1, 2, ..., N), with one additional edge added. The added edge has two 
+// different vertices chosen from 1 to N, and was not an edge that already existed.
 
 // The resulting graph is given as a 2D-array of edges. Each element of edges is a pair [u, v] with u < v, that represents an undirected edge connecting nodes u and v.
 
@@ -64,7 +66,7 @@ public:
         int n = edges.size();
         dsu a(n);
         for(int i=0;i<n;i++){
-            if(a.findParent(edges[i][0]) == b.findParent(edges[i][1]) ){
+            if(a.findParent(edges[i][0]) == a.findParent(edges[i][1]) ){
                 return edges[i];
             }
             else{

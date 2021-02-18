@@ -16,8 +16,6 @@ int main(){
         }
 
         double slope = (double)((double)(y1 - y) / (double) (x1 - x));
-        // cout<<slope<<endl;
-        // cout<<"slope is : "<<slope<<endl;
         um.insert(slope);
     }
     cout<<um.size()<<endl;
