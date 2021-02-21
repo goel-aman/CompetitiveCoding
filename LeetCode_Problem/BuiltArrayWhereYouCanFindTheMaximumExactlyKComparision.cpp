@@ -40,6 +40,9 @@
 // 1 <= m <= 100
 // 0 <= k <= n
 
+#include<bits/stdc++.h>
+using namespace std;
+
 class Solution {
     int mod = 1000000007;
     // k , largest PRev, index
