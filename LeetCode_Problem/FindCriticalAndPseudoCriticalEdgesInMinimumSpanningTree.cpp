@@ -132,7 +132,7 @@ public:
                 critical.push_back(i);
             }          
         }
-        cout<<endl;
+
         unordered_map<int,bool> um;
         for(auto x: critical){
             um[x] = true;
