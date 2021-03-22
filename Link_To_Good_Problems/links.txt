@@ -8,6 +8,7 @@ https://leetcode.com/problems/accounts-merge/
 https://leetcode.com/problems/regions-cut-by-slashes/ 
 https://leetcode.com/problems/redundant-connection-ii/
 https://leetcode.com/problems/smallest-string-with-swaps/
+https://leetcode.com/problems/minimize-malware-spread/
 
 
 /* Graph Problem */

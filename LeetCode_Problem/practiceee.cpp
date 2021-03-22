@@ -2,11 +2,10 @@
 using namespace std;
 
 int main(){
-    vector<int> v = {1,2,3,4,5,6};
-    string ans;
-    for(auto m: v){
-        ans.push_back(m + '0');
-    }
-    cout<<ans<<endl;
-    return 0;
+    vector<int> first = {3,4,5};
+    vector<int> second = {9,8,4};
+    vector<int> res = {2,1,5};
+    res = min(first,res);
+    res = min(second,res);
+    cout<<res[0]<<endl;
 }
