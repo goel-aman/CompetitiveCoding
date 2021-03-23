@@ -2,10 +2,11 @@
 using namespace std;
 
 int main(){
-    vector<int> first = {3,4,5};
-    vector<int> second = {9,8,4};
-    vector<int> res = {2,1,5};
-    res = min(first,res);
-    res = min(second,res);
-    cout<<res[0]<<endl;
+    vector<vector<int>> v{{0,0},{0,1},{0,2}};
+    vector<int> res = {-1,0};
+    for(int i=0;i<=2;i++){
+        res = max(res,v[i]);
+    }
+    cout<<res[1]<<endl;
+    return 0;
 }
