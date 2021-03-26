@@ -77,7 +77,7 @@ public:
         int r = grid.size();
         int c = grid[0].size();
         vector<int> ans;
-        for(int i=0;i<hits.size(),i++){
+        for(int i=0;i<hits.size();i++){
             ans.push_back(0);   
         }
         
