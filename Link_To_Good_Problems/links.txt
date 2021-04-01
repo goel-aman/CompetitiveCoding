@@ -9,7 +9,7 @@ https://leetcode.com/problems/regions-cut-by-slashes/
 https://leetcode.com/problems/redundant-connection-ii/
 https://leetcode.com/problems/smallest-string-with-swaps/
 https://leetcode.com/problems/minimize-malware-spread/
-
+https://leetcode.com/problems/bricks-falling-when-hit/
 
 /* Graph Problem */
 https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/
