@@ -27,14 +27,54 @@ using namespace std;
 
 class Solution {
 public:
-    int kthSmallest(vector<vector<int>>& matrix, int k) {
-        vector<int> v;
-        for(int i=0;i<matrix.size();i++){
-            for(int j=0;j<matrix[0].size();j++){
-                v.push_back(matrix[i][j]);
+    int countLessThan(int mid,vector<vector<int>>& matrix){
+        /*
+            return type : int
+            description: the function is going to return the count of number of element in matrix whose 
+            value is less than or equal to k.
+        */
+
+        int rows = matrix.size();
+        int cols = matrix[0].size();
+
+        int row = rows - 1;
+        int col = 0;
+        int count = 0;
+        while(row >= 0 && col < cols){
+            if(matrix[row][col] <= mid){
+                count += (row + 1);
+                col++;
+                continue;
+            }
+
+            if(matrix[row][col] > mid){
+                row -= 1;
+                continue;
             }
         }
-        sort(v.begin(),v.end());
-        return v[k - 1];
+        return count;
+    }
+
+    int kthSmallest(vector<vector<int>>& matrix, int k) {
+        int rows = matrix.size();
+        int cols = matrix.size();
+        int low = matrix[0][0];
+        int high = matrix[rows - 1][cols - 1];
+        int answer;
+        while(low <= high){
+            int mid = ((low + high) / 2);
+            int val = countLessThan(mid,matrix);
+            if(val >= k){
+                answer = mid;
+                high = mid - 1;
+                continue;
+            }
+
+            if(val < k){
+                low = mid + 1;
+                continue;
+            }
+        }
+        return answer;
     }
 };
