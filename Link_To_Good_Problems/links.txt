@@ -11,6 +11,8 @@ https://leetcode.com/problems/smallest-string-with-swaps/
 https://leetcode.com/problems/minimize-malware-spread/
 https://leetcode.com/problems/bricks-falling-when-hit/
 
+
+
 /* Graph Problem */
 https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/
 https://leetcode.com/problems/as-far-from-land-as-possible/submissions/
@@ -29,6 +31,10 @@ https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbor
 /* Good Math / Problem Solving Based Problem */ 
 https://leetcode.com/problems/minimize-deviation-in-array/
 
+
+
+/* Tree Problems */
+https://leetcode.com/problems/count-complete-tree-nodes/
 
 
 /* Unknown Topics */
