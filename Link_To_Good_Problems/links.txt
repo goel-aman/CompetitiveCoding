@@ -30,7 +30,7 @@ https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbor
 
 /* Good Math / Problem Solving Based Problem */ 
 https://leetcode.com/problems/minimize-deviation-in-array/
-
+https://leetcode.com/problems/3sum/
 
 
 /* Tree Problems */
