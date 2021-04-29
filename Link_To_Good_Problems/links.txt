@@ -4,7 +4,7 @@ https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 /* Based On Dynamic programming */
 https://atcoder.jp/contests/dp/tasks/dp_q
 https://leetcode.com/problems/shortest-path-visiting-all-nodes/
-
+https://leetcode.com/problems/delete-columns-to-make-sorted-iii/
 
 /* Based On Union Find Algorithm */ 
 https://leetcode.com/problems/accounts-merge/ 
