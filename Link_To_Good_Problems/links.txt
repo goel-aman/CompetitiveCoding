@@ -49,4 +49,5 @@ https://codeforces.com/contest/1415/problem/C
 https://leetcode.com/problems/dungeon-game
 https://leetcode.com/problems/additive-number/
 https://leetcode.com/problems/furthest-building-you-can-reach/
+https://leetcode.com/problems/beautiful-array/
 
