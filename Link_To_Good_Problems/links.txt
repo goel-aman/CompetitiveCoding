@@ -48,4 +48,5 @@ https://practice.geeksforgeeks.org/problems/optimal-strategy-for-a-game-15871156
 https://codeforces.com/contest/1415/problem/C
 https://leetcode.com/problems/dungeon-game
 https://leetcode.com/problems/additive-number/
+https://leetcode.com/problems/furthest-building-you-can-reach/
 
