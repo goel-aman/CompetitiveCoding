@@ -47,6 +47,10 @@ using namespace std;
       TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
       TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
   };
+
+
+// a better approach is to do reverse inorder and update node's value.
+
  
 class Solution {
     vector<int> vec;
