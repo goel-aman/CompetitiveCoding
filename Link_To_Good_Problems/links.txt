@@ -50,4 +50,5 @@ https://leetcode.com/problems/dungeon-game
 https://leetcode.com/problems/additive-number/
 https://leetcode.com/problems/furthest-building-you-can-reach/
 https://leetcode.com/problems/beautiful-array/
-
+https://leetcode.com/problems/3sum-closest/
+https://leetcode.com/problems/3sum-with-multiplicity/
