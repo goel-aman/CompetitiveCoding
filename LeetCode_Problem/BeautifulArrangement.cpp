@@ -36,6 +36,7 @@ public:
         if(index == n+1){
             return 1;
         }
+        
         int tempIndex = index;
         unordered_set<int> possibleNumber;
         int counter = 1;
