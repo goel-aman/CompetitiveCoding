@@ -35,6 +35,7 @@ https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbor
 https://leetcode.com/problems/minimize-deviation-in-array/
 https://leetcode.com/problems/3sum/
 https://leetcode.com/problems/4sum/
+https://leetcode.com/problems/check-if-number-is-a-sum-of-powers-of-three/
 
 
 /* Tree Problems */
