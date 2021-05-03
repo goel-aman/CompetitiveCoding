@@ -15,13 +15,14 @@ https://leetcode.com/problems/smallest-string-with-swaps/
 https://leetcode.com/problems/minimize-malware-spread/
 https://leetcode.com/problems/bricks-falling-when-hit/
 
-/* Graph Problem */
+/* Graph Problem / BFS / DFS Based Problems*/
 https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/
 https://leetcode.com/problems/as-far-from-land-as-possible/submissions/
 https://leetcode.com/problems/reconstruct-itinerary/
 https://leetcode.com/problems/clone-graph/
 https://leetcode.com/problems/number-of-squareful-arrays/
 https://leetcode.com/problems/k-similar-strings/
+https://leetcode.com/problems/array-nesting/
 
 /* Based On Floyd Warshall Algorithm */
 https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/
@@ -31,6 +32,8 @@ https://leetcode.com/problems/minimize-deviation-in-array/
 https://leetcode.com/problems/3sum/
 https://leetcode.com/problems/4sum/
 https://leetcode.com/problems/check-if-number-is-a-sum-of-powers-of-three/
+https://leetcode.com/problems/array-of-doubled-pairs/
+https://leetcode.com/problems/make-sum-divisible-by-p/
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
@@ -49,5 +52,3 @@ https://leetcode.com/problems/furthest-building-you-can-reach/
 https://leetcode.com/problems/beautiful-array/
 https://leetcode.com/problems/3sum-closest/
 https://leetcode.com/problems/3sum-with-multiplicity/
-https://leetcode.com/problems/make-sum-divisible-by-p/
-
