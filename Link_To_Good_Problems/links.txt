@@ -5,6 +5,7 @@ https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 https://atcoder.jp/contests/dp/tasks/dp_q
 https://leetcode.com/problems/shortest-path-visiting-all-nodes/
 https://leetcode.com/problems/delete-columns-to-make-sorted-iii/
+https://leetcode.com/problems/trapping-rain-water/
 
 /* Based On Union Find Algorithm */ 
 https://leetcode.com/problems/accounts-merge/ 
@@ -14,8 +15,6 @@ https://leetcode.com/problems/smallest-string-with-swaps/
 https://leetcode.com/problems/minimize-malware-spread/
 https://leetcode.com/problems/bricks-falling-when-hit/
 
-
-
 /* Graph Problem */
 https://leetcode.com/problems/minimum-number-of-vertices-to-reach-all-nodes/
 https://leetcode.com/problems/as-far-from-land-as-possible/submissions/
@@ -24,19 +23,14 @@ https://leetcode.com/problems/clone-graph/
 https://leetcode.com/problems/number-of-squareful-arrays/
 https://leetcode.com/problems/k-similar-strings/
 
-
-
 /* Based On Floyd Warshall Algorithm */
 https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/
-
-
 
 /* Good Math / Problem Solving Based Problem / array Based */ 
 https://leetcode.com/problems/minimize-deviation-in-array/
 https://leetcode.com/problems/3sum/
 https://leetcode.com/problems/4sum/
 https://leetcode.com/problems/check-if-number-is-a-sum-of-powers-of-three/
-
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
@@ -55,3 +49,5 @@ https://leetcode.com/problems/furthest-building-you-can-reach/
 https://leetcode.com/problems/beautiful-array/
 https://leetcode.com/problems/3sum-closest/
 https://leetcode.com/problems/3sum-with-multiplicity/
+https://leetcode.com/problems/make-sum-divisible-by-p/
+
