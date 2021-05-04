@@ -36,9 +36,46 @@ using namespace std;
 // 0 <= c0 < grid[0].length
 // 1 <= color <= 1000
 
+
+
 class Solution {
 public:
+    // m means rows , n means cols
+    bool inside(int m,int n,int r,int c){
+        if(r >= m || r < 0 || c >= n || c < 0 ){
+            return false;
+        }
+
+        return true;
+    }
     vector<vector<int>> colorBorder(vector<vector<int>>& grid, int r0, int c0, int color) {
-        
+        int rows = grid.size();
+        int original = grid[r0][c0];
+        int cols = grid[0].size();
+        vector<int> visited(2505, -1);
+        queue<pair<int,int>> que;
+        int x[] = {1,-1,0,0};
+        int y[] = {0,0,-1,1};
+        que.push({r0,c0});
+        visited[r0 * cols + c0] = 1;
+        while(!que.empty()){
+            pair<int,int> front = que.front();
+            que.pop();
+            if(inside(rows,cols,front.first,front.second) && front.first == rows - 1 || front.first == 0 || front.second == 0 || front.second == cols - 1){
+                grid[front.first][front.second] = color;
+            }          
+            
+            for(int i=0;i<4;i++){
+                if(inside(rows,cols,front.first + x[i],front.second + y[i]) && visited[((front.first + x[i]) * cols )+ front.second + y[i]] == -1){
+                    if(grid[front.first + x[i]][front.second + y[i]] == original){
+                        visited[(front.first + x[i]) * cols + front.second] = 1;
+                        que.push({front.first + x[i],front.second + y[i]});
+                    }else{
+                        grid[front.first][front.second] = color;
+                    }
+                }           
+            }
+        }
+        return grid;
     }
 };
