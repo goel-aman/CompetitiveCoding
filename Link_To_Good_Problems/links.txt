@@ -8,6 +8,7 @@ https://leetcode.com/problems/shortest-path-visiting-all-nodes/
 https://leetcode.com/problems/delete-columns-to-make-sorted-iii/
 https://leetcode.com/problems/trapping-rain-water/
 https://leetcode.com/problems/combination-sum/
+https://leetcode.com/problems/maximum-length-of-repeated-subarray/
 
 /* Based On Union Find Algorithm */ 
 https://leetcode.com/problems/accounts-merge/ 
