@@ -29,3 +29,25 @@ using namespace std;
 // Constraints:
 // 1 <= seq.size <= 10000
 
+class Solution {
+public:
+    vector<int> maxDepthAfterSplit(string seq) {
+        int seqLength = seq.length();
+        int opening = 0;
+        int closing = 0;
+        vector<int> ans;
+        for(int i=0;i<seqLength;i++){
+            if(seq[i] == '('){
+                ans.push_back(opening);
+                opening = (!opening);
+                continue;
+            }
+            if(seq[i] == ')'){
+                ans.push_back(closing);
+                closing = (!closing);
+                continue;
+            }
+        }
+        return ans;
+    }
+};
