@@ -1,5 +1,6 @@
 /* Binary Search */
 https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
+https://leetcode.com/problems/maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold/
 
 /* Based On Dynamic programming */
 https://leetcode.com/problems/maximum-height-by-stacking-cuboids/
