@@ -43,6 +43,7 @@ https://leetcode.com/problems/avoid-flood-in-the-city/
 https://leetcode.com/problems/bag-of-tokens/
 https://leetcode.com/problems/best-sightseeing-pair/
 https://leetcode.com/problems/binary-subarrays-with-sum/
+https://leetcode.com/problems/rotate-image/
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
