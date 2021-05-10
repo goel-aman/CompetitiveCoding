@@ -3,6 +3,7 @@ https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 https://leetcode.com/problems/maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold/
 https://leetcode.com/problems/random-point-in-non-overlapping-rectangles/
 
+
 /* Based On Dynamic programming */
 https://leetcode.com/problems/maximum-height-by-stacking-cuboids/
 https://atcoder.jp/contests/dp/tasks/dp_q
@@ -66,3 +67,4 @@ https://leetcode.com/problems/furthest-building-you-can-reach/
 https://leetcode.com/problems/beautiful-array/
 https://leetcode.com/problems/3sum-closest/
 https://leetcode.com/problems/3sum-with-multiplicity/
+https://leetcode.com/problems/bitwise-ors-of-subarrays/
