@@ -13,6 +13,7 @@ https://leetcode.com/problems/trapping-rain-water/
 https://leetcode.com/problems/combination-sum/
 https://leetcode.com/problems/maximum-length-of-repeated-subarray/
 https://leetcode.com/problems/count-numbers-with-unique-digits/
+https://leetcode.com/problems/maximum-profit-in-job-scheduling/
 
 /* Based On Union Find Algorithm */ 
 https://leetcode.com/problems/accounts-merge/ 
