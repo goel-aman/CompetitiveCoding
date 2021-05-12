@@ -2,7 +2,7 @@
 https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 https://leetcode.com/problems/maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold/
 https://leetcode.com/problems/random-point-in-non-overlapping-rectangles/
-
+https://leetcode.com/problems/search-in-rotated-sorted-array/
 
 /* Based On Dynamic programming */
 https://leetcode.com/problems/maximum-height-by-stacking-cuboids/
