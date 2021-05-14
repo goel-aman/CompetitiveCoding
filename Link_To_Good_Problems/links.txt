@@ -72,3 +72,7 @@ https://leetcode.com/problems/beautiful-array/
 https://leetcode.com/problems/3sum-closest/
 https://leetcode.com/problems/3sum-with-multiplicity/
 https://leetcode.com/problems/bitwise-ors-of-subarrays/
+
+
+/* Based on prefix Sum */
+https://leetcode.com/problems/can-make-palindrome-from-substring/
