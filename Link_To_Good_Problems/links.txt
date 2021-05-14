@@ -14,6 +14,7 @@ https://leetcode.com/problems/combination-sum/
 https://leetcode.com/problems/maximum-length-of-repeated-subarray/
 https://leetcode.com/problems/count-numbers-with-unique-digits/
 https://leetcode.com/problems/maximum-profit-in-job-scheduling/
+https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/
 
 /* Based On Union Find Algorithm */ 
 https://leetcode.com/problems/accounts-merge/ 
@@ -49,6 +50,7 @@ https://leetcode.com/problems/binary-subarrays-with-sum/
 https://leetcode.com/problems/rotate-image/
 https://leetcode.com/problems/wiggle-sort-ii/
 https://leetcode.com/problems/search-a-2d-matrix-ii/
+https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
