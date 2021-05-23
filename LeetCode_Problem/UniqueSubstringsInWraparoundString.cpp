@@ -34,12 +34,20 @@ class Solution {
 public:
     int findSubstringInWraproundString(string p) {
         int pLength = p.length();
-        for(int i=1;i<=pLength;i++){
-            string temp = p.substr(0,i);
-            s.insert(temp);
-            int val = findSubstringInWraproundString(p.substr(i));
+        vector<int> vec(26,0);
+        int maxLength = 0;
+        for(int i=0;i<pLength;i++){
+            if(i > 0 && (p[i] - p[i - 1] == 1 || p[i - 1] - p[i] == 25 )){
+                maxLength++;
+            }else{
+                maxLength = 1;
+            }
+            vec[p[i] - 'a'] =  max(vec[p[i] - 'a'],maxLength);
         }
-
-        return s.size();
+        int ans = 0;
+        for(auto element : vec){
+            ans += element;
+        }
+        return ans;
     }
 };
