@@ -62,6 +62,7 @@ https://leetcode.com/problems/longest-palindromic-substring/
 https://leetcode.com/problems/pyramid-transition-matrix/
 https://leetcode.com/problems/ugly-number-ii/
 https://leetcode.com/problems/count-good-meals/
+https://leetcode.com/problems/count-nice-pairs-in-an-array/
 
 
 /* Tree Problems */
