@@ -37,6 +37,7 @@ https://leetcode.com/problems/number-of-closed-islands/
 https://leetcode.com/problems/where-will-the-ball-fall/
 https://leetcode.com/problems/open-the-lock/
 
+
 /* Based On Floyd Warshall Algorithm */
 https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/
 
@@ -58,6 +59,7 @@ https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sort
 https://leetcode.com/problems/unique-substrings-in-wraparound-string/
 https://leetcode.com/problems/continuous-subarray-sum/
 https://leetcode.com/problems/longest-palindromic-substring/
+https://leetcode.com/problems/pyramid-transition-matrix/
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
