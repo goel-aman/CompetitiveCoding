@@ -61,6 +61,7 @@ https://leetcode.com/problems/continuous-subarray-sum/
 https://leetcode.com/problems/longest-palindromic-substring/
 https://leetcode.com/problems/pyramid-transition-matrix/
 https://leetcode.com/problems/ugly-number-ii/
+https://leetcode.com/problems/count-good-meals/
 
 
 /* Tree Problems */
