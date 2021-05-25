@@ -60,6 +60,8 @@ https://leetcode.com/problems/unique-substrings-in-wraparound-string/
 https://leetcode.com/problems/continuous-subarray-sum/
 https://leetcode.com/problems/longest-palindromic-substring/
 https://leetcode.com/problems/pyramid-transition-matrix/
+https://leetcode.com/problems/ugly-number-ii/
+
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
