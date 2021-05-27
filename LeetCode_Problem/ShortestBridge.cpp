@@ -98,7 +98,7 @@ public:
 
                 if( (x + 1 <  rows && x + 1 >= 0 && grid[x + 1][y] == 1) || (x - 1 < rows && x - 1 >= 0 && grid[x - 1][y] == 1) 
                     || (y - 1 < cols && y - 1 >= 0 && grid[x][y - 1] == 1) || (y + 1 < cols && y + 1 >= 0 && grid[x][y + 1] == 1) ){
-                    // cout<<"hello world"<<endl;
+                    
                     return answer;     
                 }
             }
