@@ -37,6 +37,7 @@ https://leetcode.com/problems/array-nesting/
 https://leetcode.com/problems/number-of-closed-islands/
 https://leetcode.com/problems/where-will-the-ball-fall/
 https://leetcode.com/problems/open-the-lock/
+https://leetcode.com/problems/shortest-bridge/
 
 
 /* Based On Floyd Warshall Algorithm */
