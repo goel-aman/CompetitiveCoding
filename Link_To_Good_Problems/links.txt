@@ -66,6 +66,7 @@ https://leetcode.com/problems/ugly-number-ii/
 https://leetcode.com/problems/count-good-meals/
 https://leetcode.com/problems/count-nice-pairs-in-an-array/
 https://leetcode.com/problems/count-number-of-nice-subarrays/
+https://leetcode.com/problems/count-triplets-that-can-form-two-arrays-of-equal-xor/
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
