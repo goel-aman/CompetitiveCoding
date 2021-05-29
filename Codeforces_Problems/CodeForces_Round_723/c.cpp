@@ -1,50 +1,38 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define ll long long int
-
-ll arr[] = {11,111,1111,11111,111111,1111111,11111111,111111111};
-unordered_map<string,bool> um;
-
-bool solve(ll n,ll index){
-    if(n == 0){
-        return true;
-    }
-
-    if(n < 11 || n < 0){
-        return false;
-    }
-
-    if(index < 0){
-        return false;
-    }
-    string s = to_string(n) + ";" + to_string(index);
-    if(um.count(s)){
-        return um[s];
-    }
-    if(arr[index] > n){
-        return solve(n,index - 1);
-    }
-
-    ll maxNum = (n / arr[index]);
-    for(int i=maxNum;i>=0;i--){
-        bool ans = solve(n - (arr[index] * i),index - 1);
-        if(ans == true){
-            return um[s] =  true;
-        }
-    }
-    return um[s] = false;
-}
+#define ll long long int 
 
 int main(){
-    ll t;
-    cin>>t;
-    while(t--){
-        ll n;
-        cin>>n;
-        if(solve(n,6)){
-            cout<<"YES"<<endl;
-        }else{
-            cout<<"NO"<<endl;
+    ll n;
+    cin>>n;
+    ll arr[n];
+    for(ll i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    priority_queue<long long int> pq;
+    ll answer = 0;
+    ll count = 0;
+    ll sum = 0;
+    for(ll i=0;i<n;i++){
+        sum += arr[i];
+        count++;
+        if(sum >= 0){
+            answer = max(count,answer);
+        }
+        if(arr[i] < 0){
+            pq.push(abs(arr[i]));
+        }
+
+        while(sum < 0 && !pq.empty()){
+            ll front = pq.top();
+            pq.pop();
+            sum += front;
+            count--;
+        }
+        
+        if(sum < 0){
+            break;
         }
     }
+    cout<<answer<<endl;
 }
