@@ -1,12 +1,24 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int main(){
-    vector<vector<int>> v{{0,0},{0,1},{0,2}};
-    vector<int> res = {-1,0};
-    for(int i=0;i<=2;i++){
-        res = max(res,v[i]);
+class Solution {
+public:
+    int dp[1001][1001];
+    int solve(vector<vector<int>>& books, int shelf_width,int i,int w,int h){
+        if(i>=books.size()){
+            return h;
+        }
+        if(dp[i][w]!=-1){
+            return dp[i][w];
+        }
+        int ans=h+solve(books,shelf_width,i+1,books[i][0],books[i][1]);
+        if(w+books[i][0]<=shelf_width){
+            ans=min(ans,solve(books,shelf_width,i+1,w+books[i][0],max(h,books[i][1])));
+        }
+        return dp[i][w]=ans;
     }
-    cout<<res[1]<<endl;
-    return 0;
-}
+    int minHeightShelves(vector<vector<int>>& books, int shelf_width) {
+        memset(dp,-1,sizeof(dp));
+        return solve(books,shelf_width,0,0,0);
+    }
+};
