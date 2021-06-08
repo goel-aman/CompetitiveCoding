@@ -82,6 +82,7 @@ https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-t
 https://leetcode.com/problems/delete-nodes-and-return-forest/
 https://leetcode.com/problems/flip-binary-tree-to-match-preorder-traversal/
 https://leetcode.com/problems/unique-binary-search-trees-ii/
+https://leetcode.com/problems/find-duplicate-subtrees/
 
 /* Unknown Topics */
 https://leetcode.com/problems/gray-code/
