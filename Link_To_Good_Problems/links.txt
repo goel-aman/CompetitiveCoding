@@ -74,6 +74,8 @@ https://leetcode.com/problems/smallest-subsequence-of-distinct-characters/
 https://leetcode.com/problems/distant-barcodes/
 https://leetcode.com/problems/find-k-pairs-with-smallest-sums/
 https://leetcode.com/problems/longest-substring-without-repeating-characters/
+https://codeforces.com/problemset/problem/451/B
+https://codeforces.com/problemset/problem/455/A
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
