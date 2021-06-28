@@ -51,7 +51,6 @@ public:
         int end = vecLength -1;
         while(start <= end){
             if(start == 0){
-                // cout<<"hello it worked"<<endl;
                 prev = vec[start];
                 cout<<prev->val<<endl;
                 prev->next = vec[end];
@@ -59,7 +58,6 @@ public:
                 cout<<prev->val<<endl;
                 start++;
                 end--;
-                // cout<<"it got completed"<<endl;
                 continue;
             }
 
@@ -73,11 +71,9 @@ public:
                 
             prev->next = vec[start];
             prev = prev->next;
-            // cout<<prev->val<<endl;
             prev->next = vec[end];
             prev = prev->next;
             prev->next = NULL;
-            // cout<<prev->val<<endl;
             start++;
             end--;
         }
