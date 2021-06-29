@@ -30,7 +30,6 @@ using namespace std;
 // wordDictionary.search(".ad"); // return True
 // wordDictionary.search("b.."); // return True
  
-
 // Constraints:
 // 1 <= word.length <= 500
 // word in addWord consists lower-case English letters.

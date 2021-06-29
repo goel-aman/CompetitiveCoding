@@ -43,6 +43,7 @@ https://leetcode.com/problems/open-the-lock/
 https://leetcode.com/problems/shortest-bridge/
 https://leetcode.com/problems/shortest-path-in-binary-matrix/
 https://leetcode.com/problems/sum-of-nodes-with-even-valued-grandparent/
+https://leetcode.com/problems/design-add-and-search-words-data-structure/
 
 /* Based On Floyd Warshall Algorithm */
 https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/
@@ -79,6 +80,7 @@ https://codeforces.com/problemset/problem/451/B
 https://codeforces.com/problemset/problem/455/A
 https://leetcode.com/problems/rotate-array/
 https://leetcode.com/problems/implement-trie-prefix-tree/
+
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
