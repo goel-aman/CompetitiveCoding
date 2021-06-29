@@ -40,7 +40,7 @@ using namespace std;
 
 class Trie {
     bool isEnding = false;
-    unordered_map<char,Trie*> um;
+    unordered_map<char,Trie*> um = {};
 public:
     /** Initialize your data structure here. */
     Trie() {
@@ -55,10 +55,10 @@ public:
         int i=0;
         while(i < wordLength){
             if(node->um.count(word[i])){
-                node = um[word[i]];
+                node = node->um[word[i]];
             }else{
                 node->um[word[i]] = new Trie();
-                node = um[word[i]]; 
+                node = node->um[word[i]]; 
             }
             i++;
         }
@@ -74,7 +74,7 @@ public:
         int wordLength = word.length();
         while(i < wordLength){
             if(!node->um.count(word[i])){ return false; }
-            node = um[word[i]];
+            node = node->um[word[i]];
             i++;
         }
         if(node->isEnding == true){
@@ -90,12 +90,13 @@ public:
         int wordLength = prefix.length();
         while(i < wordLength){
             if(!node->um.count(prefix[i])){ return false; }
-            node = um[prefix[i]];
+            node = node->um[prefix[i]];
             i++;
         }
         return true;
     }
 };
+
 
 /**
  * Your Trie object will be instantiated and called as such:
