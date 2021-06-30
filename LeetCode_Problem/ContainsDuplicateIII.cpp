@@ -23,3 +23,23 @@ using namespace std;
 // -231 <= nums[i] <= 231 - 1
 // 0 <= k <= 104
 // 0 <= t <= 231 - 1
+
+class Solution {
+public:
+    bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t) {
+        int numsLength = nums.size();
+        set<int> se(nums.begin(),nums.end());
+        if(se.size() == nums.size() && t== 0){
+            return false;
+        }
+
+        for(int i=0;i<numsLength;i++){
+            for(int j= i + 1; j <= i + k && j < numsLength;j++){
+                if(abs(nums[j] -nums[i]) <= k){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+};
