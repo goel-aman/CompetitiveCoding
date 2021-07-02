@@ -21,7 +21,6 @@ using namespace std;
 //  in the array].
 // It is guaranteed that the answer is unique.
  
-
 // Follow up: Your algorithm's time complexity must be better
 //  than O(n log n), where n is the array's size.
 
@@ -36,6 +35,7 @@ class Solution {
 
 public:
     vector<int> topKFrequent(vector<int>& nums, int k) {
+        // can also be done using a heap of size k.
         unordered_map<int,int> um;
         int numsLength = nums.size();
         for(int i=0;i<numsLength;i++){
