@@ -43,6 +43,7 @@ using namespace std;
 // preoder consist of integers in the range
 //  [0, 100] and '#' separated by commas ','.
 
+
 class Solution {
 public:
     bool isValidSerialization(string preorder) {
@@ -69,7 +70,6 @@ public:
         int n = 2;
 
         for(int i=1;i<tokensLength;i++){
-            // cout<<"i is : "<<i<<" value is :"<<tokens[i]<<endl;
             if(tokens[i] != "#"){
                 n = n - 1;
                 if(n < 0){
@@ -91,7 +91,8 @@ public:
                 }
             }
         }
-        // cout<<"value of n is : "<<n<<endl;
+
+
         if(n != 0){
             return false;
         }
