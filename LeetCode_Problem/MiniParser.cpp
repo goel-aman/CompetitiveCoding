@@ -1,9 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// /**
-//  * // This is the interface that allows for creating nested lists.
-//  * // You should not implement it, or speculate about its implementation
   class NestedInteger {
     public:
       // Constructor initializes an empty nested list.
@@ -29,38 +26,41 @@ using namespace std;
       // The result is undefined if this NestedInteger holds a single integer
       const vector<NestedInteger> &getList() const;
   };
-//  */
+
+
 class Solution {
 public:
+
+    bool isNumber(char c){
+        if(c == '-' || isdigit(c)){
+            return true;
+        }
+        return false;
+    }
+
+
     NestedInteger deserialize(string s) {
-        NestedInteger output;
-        int sLength = s.length();
-        if(sLength == 0){
-            return output;
-        }
-
-        if(s[0] == '['){
-            return deserialize(s.substr(1,sLength - 2));
-        }
-
-        stringstream check1(s);
-        string intermediate;
-        vector<string> tokens;
-        while(getline(check1,intermediate,',')){
-            tokens.push_back(intermediate);
-        }
-
-        for(int i=0;i<tokens.size();i++){
-            if(tokens[i][0] == '['){
-                output.add(deserialize(tokens[i]));
-                continue;
-            }
-            
-            if(tokens[i][0] == '-'){
-                int value = stoi(tokens[i].substr(1));
-                output.add(-1*value);
+        stack<NestedInteger> st;
+        for(auto it = s.begin(); it != s.end();){
+            char c = (*it);
+            if(isNumber(c)){
+                auto it2 = find_if_not(it,s.end(),isNumber);
+                int val = stoi(string(it,it2));
+                st.top().add(NestedInteger(val));
+                it = it2;
+            }else{
+                if(c == '['){
+                    st.push(NestedInteger());
+                }
+                else if(c == ']'){
+                    NestedInteger li = st.top();
+                    st.pop();
+                    st.top().add(li);
+                }
+                it++;
             }
         }
-        return output;
+        NestedInteger result = st.top().getList().front();
+        return result;
     }
 };
