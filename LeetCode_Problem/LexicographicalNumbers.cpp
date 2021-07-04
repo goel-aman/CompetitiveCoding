@@ -19,7 +19,6 @@ using namespace std;
  
 // Constraints:
 // 1 <= n <= 5 * 104
-
 class Solution {
 public:
     void order(int n,int i,vector<int>& ans){
@@ -27,7 +26,7 @@ public:
             return ;
         }
 
-        ans.push(i);
+        ans.push_back(i);
         for(int j=0;j<=9;j++){
             order(n,i*10 + j,ans);
         }
@@ -36,7 +35,9 @@ public:
 
     vector<int> lexicalOrder(int n) {
         vector<int> ans;
-        order(n,1,ans);
+        for(int i=1;i<=9;i++){
+            order(n,i,ans);
+        }
         return ans;
     }
 };
