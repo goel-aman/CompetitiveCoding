@@ -36,6 +36,68 @@ using namespace std;
 class Solution {
 public:
     string removeKdigits(string num, int k) {
+        bool visit = false;
         int numLength = num.length();
+        int lengthRequired = numLength - k;
+        if(lengthRequired == 0){
+            return "0";
+        }
+        stack<char> st;
+        string ans = "";
+        int i = 0;
+        for(;i<numLength;i++){
+           
+            int leftOut = numLength - i;
+            
+            if(st.size() + leftOut == lengthRequired){
+                visit = true;
+                while(!st.empty()){
+                    ans.push_back(st.top());
+                    st.pop();
+                }
+                reverse(ans.begin(),ans.end());
+                for(int j= i;j<numLength;j++){
+                    ans.push_back(num[j]);
+                }
+                break;
+            }
+            int iteration = st.size() + (numLength - i) - lengthRequired;
+            while(!st.empty() && st.top() - '0' > (num[i] - '0') && iteration > 0){
+                st.pop();
+                iteration--;
+            }    
+            
+            st.push(num[i]);
+        }
+        // cout<<"answer is : "<<ans<<endl;
+        while(!st.empty()){
+            ans.push_back(st.top());
+            st.pop();
+        }
+        // cout<<"answer is : "<<ans<<endl;
+        if(visit == false){
+            reverse(ans.begin(),ans.end());
+            ans = ans.substr(0,lengthRequired);
+        }
+        
+        int index = -1;
+        for(int w = 0;w<ans.length();w++){
+            if(ans[w] == '0'){
+                index = w;
+            }else{
+                break;
+            }
+        }
+        
+        if(index != -1){
+            ans = ans.substr(index + 1);
+        }
+        
+        if(ans == ""){
+            return "0";
+        }
+    
+        return ans;
     }
+
 };
