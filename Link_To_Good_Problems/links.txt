@@ -98,6 +98,7 @@ https://leetcode.com/problems/delete-nodes-and-return-forest/
 https://leetcode.com/problems/flip-binary-tree-to-match-preorder-traversal/
 https://leetcode.com/problems/unique-binary-search-trees-ii/
 https://leetcode.com/problems/find-duplicate-subtrees/
+https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/
 
 /* Unknown Topics */
 https://leetcode.com/problems/gray-code/
