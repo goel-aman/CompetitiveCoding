@@ -88,6 +88,7 @@ https://leetcode.com/problems/maximum-product-of-word-lengths/
 https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree/
 https://leetcode.com/problems/insert-delete-getrandom-o1/
 https://leetcode.com/problems/lexicographical-numbers/
+https://leetcode.com/problems/matchsticks-to-square/
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
