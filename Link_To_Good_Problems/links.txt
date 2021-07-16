@@ -91,6 +91,7 @@ https://leetcode.com/problems/lexicographical-numbers/
 https://leetcode.com/problems/matchsticks-to-square/
 https://leetcode.com/problems/next-greater-element-i/
 https://leetcode.com/problems/next-greater-element-ii/
+https://leetcode.com/problems/contiguous-array/
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
