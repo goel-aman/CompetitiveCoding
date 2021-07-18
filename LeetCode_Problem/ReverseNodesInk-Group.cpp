@@ -45,6 +45,8 @@ struct ListNode {
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
+
+
 class Solution {
 public:
     ListNode* reverseLinkedList(ListNode* head){
@@ -71,16 +73,45 @@ public:
         return prev;
     }
 
-    ListNode* reverseKGroup(ListNode* head, int k) {
-        ListNode* tempHead = head;
-        int tempK = k;
-        while(k > 0 && tempHead != NULL){
-            tempHead = tempHead -> next;
-            k--;
+    ListNode* merge(ListNode* first,ListNode* second){
+        if(first == NULL){
+            return second;
+        }
+
+        if(second == NULL){
+            return first;
+        }
+
+        ListNode* temp = first;
+        while(temp->next != NULL){
+            temp = temp->next;
         }      
 
-        if(k == 0){
+        temp->next = second;
+        return first;
+    }
 
+    ListNode* reverseKGroup(ListNode* head, int k) {
+        if(k == 0){
+            return head;
         }
+        ListNode* prev = head;
+        ListNode* tempHead = head;
+        int tempK = k;
+        while(tempK > 0 && tempHead != NULL){
+            prev = tempHead;
+            tempHead = tempHead -> next;
+            tempK--;
+        }      
+
+        if(tempK == 0){
+            prev->next = NULL;
+            ListNode* rev = reverseLinkedList(head);
+            ListNode* rec = reverseKGroup(tempHead,k);
+            ListNode* ans = merge(rev,rec);
+            return ans;
+        }
+
+        return head;
     }
 };
