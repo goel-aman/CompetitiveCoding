@@ -92,6 +92,7 @@ https://leetcode.com/problems/matchsticks-to-square/
 https://leetcode.com/problems/next-greater-element-i/
 https://leetcode.com/problems/next-greater-element-ii/
 https://leetcode.com/problems/contiguous-array/
+https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
