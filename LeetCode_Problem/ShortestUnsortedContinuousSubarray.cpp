@@ -26,28 +26,44 @@ using namespace std;
 // -105 <= nums[i] <= 105
 
 // Follow up: Can you solve it in O(n) time complexity?
-
 class Solution {
 public:
     int findUnsortedSubarray(vector<int>& nums) {
         int numsLength = nums.size();
-        vector<int> temp(nums.begin(),nums.end());
-        sort(nums.begin(),nums.end());
-        int i = 0;
-        while(i < numsLength && nums[i] == temp[i]){
-            i++;
+        int mini = INT_MAX;
+        int maxm = INT_MIN;
+        for(int i=1;i<numsLength;i++){
+            if(nums[i] < nums[i - 1]){
+                mini = min(mini,nums[i]);
+            }
         }
 
-        if(i == numsLength){
+        for(int i=numsLength - 2;i>=0;i--){
+            if(nums[i] > nums[i + 1]){
+                maxm = max(maxm,nums[i]);
+            }
+        }
+        if(maxm == INT_MIN && mini == INT_MAX){
             return 0;
-        }    
-
-        int j = numsLength - 1;
+        }
+        // cout<<"value of mini is : "<<mini<<" and value of maxi is : "<<maxm<<endl;
+        int start = 0, end = numsLength - 1;
+        for(int i=0;i<numsLength;i++){
+            if(mini < nums[i]){
+                start = i;
+                break;
+            }
+        }
         
-        while( j >= 0 && nums[j] == temp[j]){
-            j--;
+        
+
+        for(int j=numsLength - 1;j>=0;j--){
+            if(maxm > nums[j]){
+                end = j;
+                break;
+            }
         }
 
-        return (j - i + 1);
+        return (end - start + 1);
     }
 };
