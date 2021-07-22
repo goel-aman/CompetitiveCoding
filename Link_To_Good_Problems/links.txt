@@ -95,6 +95,7 @@ https://leetcode.com/problems/contiguous-array/
 https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/
 https://leetcode.com/problems/ways-to-make-a-fair-array/
 https://leetcode.com/problems/dota2-senate/
+https://leetcode.com/problems/split-array-into-consecutive-subsequences/
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
