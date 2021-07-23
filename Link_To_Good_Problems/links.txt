@@ -109,6 +109,7 @@ https://leetcode.com/problems/flip-binary-tree-to-match-preorder-traversal/
 https://leetcode.com/problems/unique-binary-search-trees-ii/
 https://leetcode.com/problems/find-duplicate-subtrees/
 https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/
+https://leetcode.com/problems/trim-a-binary-search-tree/
 
 /* Unknown Topics */
 https://leetcode.com/problems/gray-code/
