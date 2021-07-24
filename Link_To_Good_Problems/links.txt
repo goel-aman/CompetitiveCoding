@@ -50,7 +50,8 @@ https://leetcode.com/problems/non-decreasing-array/
 /* Based On Floyd Warshall Algorithm */
 https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/
 
-/* Good Math / Problem Solving Based Problem / array Based */ 
+/* Good Math / Problem Solving Based Problem / array Based */
+https://leetcode.com/problems/valid-parenthesis-string/
 https://leetcode.com/problems/minimize-deviation-in-array/
 https://leetcode.com/problems/3sum/
 https://leetcode.com/problems/4sum/
