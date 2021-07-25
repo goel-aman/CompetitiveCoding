@@ -22,9 +22,6 @@ using namespace std;
 // 1 <= nums[i] <= 104
 // The frequency of each element is in the range [1, 4].
 
-
-
-
 class Solution {
     int numsLength;
 public:
