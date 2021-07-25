@@ -30,4 +30,34 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
+class Solution {
+    int ans = 0;
+public:
+
+    int solve(TreeNode* root){
+        if(root == NULL){
+            return 0;
+        }
+
+        int left = solve(root->left);
+        int right = solve(root->right);
+        int leftTree = 0, rightTree = 0;
+        if(root->left != NULL && root->left->val == root->val){
+            left += 1;
+        }
+
+        if(root->right != NULL && root->right->val == root->val){
+            right += 1;
+        }
+
+        ans = max(ans,left+ right);
+        return max(left,right);
+    }
+
+    int longestUnivaluePath(TreeNode* root) {
+        int ans = 0;
+        int val = solve(root);
+        return ans;
+    }
+};
 
