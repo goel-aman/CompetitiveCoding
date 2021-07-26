@@ -30,3 +30,60 @@ using namespace std;
 // 1 <= s1.length, s2.length <= 1000
 // s1 and s2 consist of lowercase English letters.
 
+
+class Solution {
+    int s1Length;
+    int s2Length;
+    int dp[1001][1001];
+    
+public:
+    int longestCommonSubsequence(string& s1,string& s2,int index1,int index2){
+        if(index1 == s1Length and index2 == s2Length){
+            return 0;
+                    }
+
+
+        if(dp[index1][index2] != -1){
+            return dp[index1][index2];
+        }
+
+        if(index1 == s1Length){
+            int sum = 0;
+            for(int i=index2;i<s2Length;i++){
+                sum += (int) s2[i];
+            }
+            return dp[index1][index2] = sum;
+        }
+
+        if(index2 == s2Length){
+            int sum = 0;
+            for(int i=index1;i<s1Length;i++){
+                sum += (int) s1[i];
+            }
+            return dp[index1][index2] = sum;
+        }
+
+        
+        if(s1[index1] == s2[index2]){
+            return  dp[index1][index2] = longestCommonSubsequence(s1,s2,index1 + 1,index2 + 1);
+        }
+        
+        
+        int value1 = longestCommonSubsequence(s1,s2,index1 + 1,index2) + (int) s1[index1];
+        int value2 = longestCommonSubsequence(s1,s2,index1,index2 + 1) + (int) s2[index2];
+        
+        if(value1 < value2){
+            return dp[index1][index2] = value1;
+        }
+        
+        return value2;
+    }
+
+    int minimumDeleteSum(string s1, string s2) {
+        s1Length = s1.length();
+        s2Length = s2.length();
+        memset(dp,-1,sizeof(dp));
+        int ans = longestCommonSubsequence(s1,s2,0,0);      
+        return ans;
+    }
+};
