@@ -32,52 +32,38 @@ using namespace std;
 // nums2.length == nums1.length
 // 0 <= nums1[i], nums2[i] <= 2 * 105
 
+
 class Solution {
     int nums1Length;
-    int nums2Length;
+    int dp[100001][2];
 public:
-    int solve(vector<int> nums1,vector<int> nums2,int index1,int swappingNeeded){
-        if(index1 == nums2Length - 1){
-            if(swappingNeeded){
-                int temp = nums1[index1];
-                nums1[index1] = nums2[index1];
-                nums2[index1] = temp;
-                if(nums1[index1] > nums1[index1 - 1] && nums2[index1] > nums2[index1 - 1]){
-                    return 1;
-                }
-                return INT_MAX;
-            }
+    // 1 means it was swapped , 0 means it was not swapped.
+    int solve(vector<int>& nums1,vector<int>& nums2,int index,int swapped,int prevA,int prevB){
+        if(index == nums1Length){
             return 0;
         }
 
-        
-        if(swappingNeeded){
-            int temp = nums1[index1];
-            nums1[index1] = nums2[index1];
-            nums2[index1] = temp;
-            if(nums1[index1] > nums1[index1 - 1] && nums2[index1] > nums2[index1 - 1]){
-                return 1 + solve(nums1,nums2,index1,0);
-            }
-            return INT_MAX;
+        if(dp[index][swapped] != -1){
+            return dp[index][swapped];
         }
 
+        int minSwap = INT_MAX;
 
-        if(nums1[index1] < nums1[index1 + 1] && nums2[index1] < nums2[index1 + 1]){
-            return solve(nums1,nums2,index1 + 1,0);
+        if(nums1[index] > prevA && nums2[index] > prevB){
+            minSwap = min(minSwap,solve(nums1,nums2,index + 1,0,nums1[index],nums2[index]));
+        }
+        
+        // now we are going to swap.
+        if(nums1[index] > prevB && nums2[index] > prevA){
+            minSwap = min(minSwap,solve(nums1,nums2,index + 1,1,nums2[index],nums1[index]) + 1);
         }
 
-        // first case swap it right now or else do it later.
-        int value1 = solve(nums1,nums2,index1 + 1,1);
-
-        
+        return dp[index][swapped] = minSwap;
     }
 
     int minSwap(vector<int>& nums1, vector<int>& nums2) {
         nums1Length = nums1.size();
-        nums2Length = nums2.size();
-        int swaps = 0;
-        int swappingNeeded = 0;
-        int i = 0, j = 0;
-
+        memset(dp,-1,sizeof(dp));
+        return solve(nums1,nums2,0,0,-1,-1);
     }
 };
