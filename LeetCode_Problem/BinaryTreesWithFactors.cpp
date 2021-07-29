@@ -37,7 +37,7 @@ public:
         int arrLength = arr.size();
         sort(arr.begin(),arr.end());
         unordered_map<int,long long int> um;
-
+        long long int ans = 0;
         for(int i=0;i<arrLength;i++){
             um[arr[i]]++;
             int value = arr[i];
@@ -50,11 +50,12 @@ public:
                     um[arr[i]] += (um[arr[i]/j] * um[j] * 2);
                 }
             }
+            ans = (ans +  um[arr[i]])%mod;
         }
-        long long int ans = 0;
-        for(auto var : um){
-            ans = (ans + var.second)%mod;
-        }
+        
+        // for(auto var : um){
+        //     ans = (ans + var.second)%mod;
+        // }
         return ans;
     }
 };
