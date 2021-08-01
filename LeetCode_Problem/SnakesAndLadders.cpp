@@ -63,19 +63,25 @@ public:
     pair<int,int> detectCellPosition(int number){
         int temporaryRow = (number - 1)/n;
         int temporaryColumn = (number-1)%n;
-        // cout<<"temporaryColumn is ;"<<temporaryColumn<<endl;
+        
         int row = n - temporaryRow - 1;
-        if(number == 5)
-        {
-            // cout<<"row is :"<<row<<endl;
-        }
+
         int column = temporaryColumn;
         if(row%2 == 0){
-            column = n - 1 - temporaryColumn;
+            if(n%2 == 1){
+                // column = temporaryColumn;    
+            }else{
+                column = n - 1 - temporaryColumn;
+            }
+            
         }else{
-            // column = (temporaryColumn - 1 + n)%n;
+            if(n%2 == 0){
+                // column = temporaryColumn;
+            }else{
+                column = n - 1 - temporaryColumn;    
+            }
+            
         }
-        // cout<<"number is :"<<number<<" and row is :"<<row<<" column is : "<<column<<endl;
         return {row,column};
     }
 
@@ -95,27 +101,29 @@ public:
             while(size--){
                 int value = que.front();
                 que.pop();
-
+                
                 if(value == target){
                     return level;
                 }
 
                 for(int i=1;i<=6;i++){
                     int next = value + i;
-                    if(next <= target){
-                        pair<int,int> p = detectCellPosition(next);
-                        // cout<<p.first<<" "<<p.second<<endl;
-                        if(board[p.first][p.second] != -1 && visited[board[p.first][p.second]] == -1){
-                            visited[board[p.first][p.second]] = 1;
-                            que.push(board[p.first][p.second]);
-                        }
-                        else{
-                            if(visited[next] == -1){
-                                visited[next] = 1;
-                                que.push(next);
-                            }
-                        }
+                    if(next > target){
+                        break;
                     }
+
+                    pair<int,int> p = detectCellPosition(next);
+                    if(visited[next] == 1){
+                        continue;
+                    }
+                    visited[next] = 1;
+                    if(board[p.first][p.second] != -1){
+                        que.push(board[p.first][p.second]);
+                    }
+                    else{
+                        que.push(next);
+                    }
+                    
                 }
             }
             level++;
