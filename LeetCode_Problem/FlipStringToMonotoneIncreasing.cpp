@@ -81,20 +81,15 @@ public:
         }
 
         int ans = INT_MAX;
-        // all zero 
+         
         int allZero = suffix[0].second;
-        // cout<<"All Zero is : "<<allZero<<endl;
+        
         ans = min(ans,allZero);
-
         int allOne = suffix[0].first;
         ans = min(ans,allOne);
-        // cout<<"all One is : "<<allOne<<endl;
 
         for(int i=0;i<sLength - 1;i++){
             int val = prefix[i].second + suffix[i + 1].first;
-            // if(i == 1){
-            //     cout<<"val is : "<<val<<endl;
-            // }
             ans = min(ans,val);
         }
         return ans;
