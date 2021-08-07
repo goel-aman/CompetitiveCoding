@@ -50,6 +50,7 @@ using namespace std;
 // costs.length == 3
 // 1 <= costs[i] <= 1000
 
+
 class Solution {
     int daysLength;
     int dp[366];
