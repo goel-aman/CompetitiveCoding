@@ -56,7 +56,6 @@ public:
         int s1Length = s1.length();
         int s2Length = s2.length();
 
-        // is s1 a predecessor of s2
         if( !(s2Length - 1 == s1Length)){
             return false;
         }
@@ -98,7 +97,6 @@ public:
                     break;
                 }
                 if(isPredecessor(words[i],words[j])){
-                    // cout<<words[i]<<" "<<words[j]<<" are predecessor"<<endl;
                     ans[i] = max(ans[i],ans[j] + 1);
                     maxValue = max(ans[i],maxValue);
                 }
