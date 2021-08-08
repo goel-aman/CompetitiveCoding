@@ -37,7 +37,6 @@ using namespace std;
 // Output: false
 // Explanation: It is impossible to get "cababc" using the operation.
  
-
 // Constraints:
 // 1 <= s.length <= 2 * 104
 // s consists of letters 'a', 'b', and 'c'
