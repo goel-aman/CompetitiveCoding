@@ -20,6 +20,7 @@ https://leetcode.com/problems/stone-game-ii/
 https://leetcode.com/problems/count-submatrices-with-all-ones/
 https://leetcode.com/problems/domino-and-tromino-tiling/submissions/
 https://leetcode.com/problems/maximum-product-subarray
+https://leetcode.com/problems/longest-arithmetic-subsequence/
 
 /* Based On Union Find Algorithm */ 
 https://leetcode.com/problems/accounts-merge/ 
