@@ -106,6 +106,7 @@ https://leetcode.com/problems/robot-bounded-in-circle/
 https://leetcode.com/problems/flip-columns-for-maximum-number-of-equal-rows/
 https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/
 https://leetcode.com/problems/longest-well-performing-interval/
+https://leetcode.com/problems/maximum-of-absolute-value-expression/
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
