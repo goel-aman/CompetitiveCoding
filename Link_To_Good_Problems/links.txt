@@ -104,6 +104,8 @@ https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/
 https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/
 https://leetcode.com/problems/robot-bounded-in-circle/
 https://leetcode.com/problems/flip-columns-for-maximum-number-of-equal-rows/
+https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/
+https://leetcode.com/problems/longest-well-performing-interval/
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
