@@ -41,9 +41,58 @@ using namespace std;
 // Follow up: Could you find an algorithm that 
 // runs in O(m + n) time?
 
+
 class Solution {
 public:
+    bool isValid(unordered_map<char,int> &tMap,unordered_map<char,int> &currentMap){
+        for(auto &var : tMap){
+            if(!currentMap.count(var.first)){
+                return false;
+            }
+
+            if(currentMap[var.first] < var.second){
+                return false;
+            }
+        }
+        return true;
+    }
+
     string minWindow(string s, string t) {
-        
+        int tLength = t.length();
+        int sLength = s.length();
+        unordered_map<char,int> tMap,currentMap;
+        for(int i=0;i<tLength;i++){
+            tMap[t[i]]++;
+        }
+
+        int ans = INT_MAX; 
+        string ansValue = "";
+        string currentValue = "";
+        int start = 0, end = 0;
+        while(end < sLength){
+            currentMap[s[end]]++;
+            end++;
+            if(end == sLength){
+                cout<<"start is : "<<start<<"end is : "<<end<<endl;
+            }
+            if(isValid(tMap,currentMap)){
+                if(end - start < ans){
+                    ans = end - start;
+                    ansValue = s.substr(start,ans);
+                }
+            }else{
+                continue;
+            }
+
+            while(start < end && isValid(tMap,currentMap)){
+                if(end - start < ans){
+                    ans = end - start;
+                    ansValue = s.substr(start,ans);
+                }
+                currentMap[s[start]]--;
+                start++;
+            }
+        }
+        return ansValue;
     }
 };
