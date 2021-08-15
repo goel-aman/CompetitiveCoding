@@ -29,8 +29,6 @@ using namespace std;
 // 0 <= hours[i] <= 16
 
 
-
-
 class Solution {
 public:
     int longestWPI(vector<int>& hours) {
