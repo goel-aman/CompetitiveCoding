@@ -72,9 +72,7 @@ public:
         while(end < sLength){
             currentMap[s[end]]++;
             end++;
-            if(end == sLength){
-                cout<<"start is : "<<start<<"end is : "<<end<<endl;
-            }
+
             if(isValid(tMap,currentMap)){
                 if(end - start < ans){
                     ans = end - start;
