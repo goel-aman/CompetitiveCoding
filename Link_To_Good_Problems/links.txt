@@ -108,6 +108,7 @@ https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balance
 https://leetcode.com/problems/longest-well-performing-interval/
 https://leetcode.com/problems/maximum-of-absolute-value-expression/
 https://leetcode.com/problems/minimum-total-space-wasted-with-k-resizing-operations/
+https://leetcode.com/problems/minimum-garden-perimeter-to-collect-enough-apples/
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
