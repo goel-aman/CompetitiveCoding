@@ -34,5 +34,4 @@ using namespace std;
  
 
 // Constraints:
-
 // 1 <= neededApples <= 1015
