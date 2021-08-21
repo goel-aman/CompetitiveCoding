@@ -111,6 +111,8 @@ https://leetcode.com/problems/minimum-total-space-wasted-with-k-resizing-operati
 https://leetcode.com/problems/minimum-garden-perimeter-to-collect-enough-apples/
 https://leetcode.com/problems/minimum-swaps-to-make-strings-equal/
 https://leetcode.com/problems/reconstruct-a-2-row-binary-matrix/
+https://leetcode.com/problems/maximum-number-of-weeks-for-which-you-can-work/
+
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
