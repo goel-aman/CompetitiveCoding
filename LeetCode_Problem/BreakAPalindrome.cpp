@@ -42,8 +42,6 @@ using namespace std;
 // 1 <= palindrome.length <= 1000
 // palindrome consists of only lowercase English letters.
 
-
-
 class Solution {
 public:
     string breakPalindrome(string palindrome) {
