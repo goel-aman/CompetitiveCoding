@@ -113,6 +113,7 @@ https://leetcode.com/problems/minimum-swaps-to-make-strings-equal/
 https://leetcode.com/problems/reconstruct-a-2-row-binary-matrix/
 https://leetcode.com/problems/maximum-number-of-weeks-for-which-you-can-work/
 https://leetcode.com/problems/describe-the-painting/
+https://leetcode.com/problems/longest-happy-string/
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
