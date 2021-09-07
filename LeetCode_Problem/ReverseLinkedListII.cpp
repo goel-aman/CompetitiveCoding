@@ -23,3 +23,38 @@ using namespace std;
  
 // Follow up: Could you do it in one pass?
 
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+class Solution {
+public:
+    ListNode* reverseBetween(ListNode* head, int left, int right) {
+        vector<int> vec;
+        ListNode* temp = head;
+        while(temp != NULL){
+            vec.push_back(temp->val);
+            temp = temp->next;
+        }
+        stack<int> st;
+        for(int i=left;i<=right;i++){
+            st.push(vec[i-1]);
+        }
+
+        for(int i=left;i<=right;i++){
+            vec[i-1] = st.top();
+            st.pop();
+        }
+        temp = head;
+        int i = 0;
+        while(temp != NULL){
+            temp->val = vec[i];
+            i++;
+            temp = temp->next;
+        }
+        return head;
+    }
+};
