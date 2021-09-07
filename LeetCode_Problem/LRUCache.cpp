@@ -42,19 +42,44 @@ using namespace std;
 // 0 <= value <= 105
 // At most 2 * 105 calls will be made to get and put.
 
-
 class LRUCache {
+    int siz = 0;
+    int currentSize = 0;
+    list<pair<int,int>> l;
+    unordered_map<int,list<pair<int,int>>::iterator> um;
 public:
     LRUCache(int capacity) {
-        
+        siz = capacity;
     }
-    
+
     int get(int key) {
-        
+        if(um.find(key) != um.end()){
+            int value = um[key]->second;
+            l.erase(um[key]);
+            um.erase(key); 
+            l.push_front({key,value});
+            um[key] = l.begin();
+            return um[key]->second;
+        }
+        return -1;
     }
     
     void put(int key, int value) {
-        
+        if(um.find(key) != um.end()){
+            l.erase(um[key]);
+            um.erase(key);
+            l.push_front({key,value});
+            um[key] = l.begin();
+            return ;
+        }else{
+            l.push_front({key,value});
+            um[key] = l.begin();
+            if(l.size() > siz){
+                um.erase(l.back().first);
+                l.pop_back();
+            }
+        }
+        return ;
     }
 };
 
