@@ -38,8 +38,8 @@ int main(){
 
             suffix.push_back({zeroCount,oneCount});            
         }
-
         reverse(suffix.begin(),suffix.end());
+
         for(ll i=0;i<sLength;i++){
             ll requiredStep = prefix[i].first;
             ll front = 0;
