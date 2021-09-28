@@ -55,7 +55,7 @@ class Solution {
     unordered_map<int,string> um;
 public:
     // p is subsequence of s
-    bool isPalindrome(string s,string p){
+    bool isPalindrome(string &s,string &p){
         int pLength = p.length();
         int sLength = s.length();
 
