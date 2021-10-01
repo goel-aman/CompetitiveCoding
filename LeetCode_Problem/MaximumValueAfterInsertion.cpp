@@ -36,7 +36,6 @@ using namespace std;
 // n is a valid representation of an integer.
 // In the case of a negative n,​​​​​​ it will begin with '-'.
 
-
 class Solution {
 public:
     string maxValue(string n, int x) {
@@ -53,7 +52,6 @@ public:
             }
         }
         else{
-            // ans = "-";
             for(int i=1;i<nLength;i++){
                 if(n[i] - '0' > x){
                     ans = n.substr(0,i) + to_string(x) + n.substr(i);
