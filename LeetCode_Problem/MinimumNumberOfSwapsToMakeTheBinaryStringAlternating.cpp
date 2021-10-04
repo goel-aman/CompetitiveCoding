@@ -79,7 +79,6 @@ public:
         if(ans == INT_MAX){
             return 0;
         }
-        // int ans = min(swapFirst/2,swapSecond/2);
         return ans;
     }   
 };
