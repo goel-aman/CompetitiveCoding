@@ -1,126 +1,43 @@
 import java.lang.Math;
 import java.util.*;
 
-abstract class Shape{  
-    public int a,b,c,s,p,h;
-    abstract int numberOfSides();  
-    abstract int calculateArea();
-}  
+  
 
-class Triangle extends Shape{
-    int numberOfSides(){
-        return 3;
-    }
-
-    int calculateArea(){
-        int s = (a + b + c)/2;
-        int value = s * (s - a) * (s - b) * (s - c);
-        int ans =(int) Math.sqrt(value);
-        return ans;
-    }
-}
-
-class Square extends Shape{
-    int numberOfSides(){
-        return 4;
-    }
-
-    int calculateArea(){
-        int ans = (a * a);
-        return ans;
-    }
-}
-
-class Pentagon extends Shape{
-    int numberOfSides(){
-        return 5;
-    }
-
-    int calculateArea(){
-        int ans = ((p * a)/2);
-        return ans;
-    }
-}
-
-class Hexagon extends Shape{
-    int numberOfSides(){
-        return 6;
-    }
-
-    int calculateArea(){
-        int ans = (6 * a * h)/2;
-        return ans;
-    }
-}
-
-class Octagon extends Shape{
-    int numberOfSides(){
-        return 8;
-    }
-
-    int calculateArea(){
-        int ans = (8 * a * h)/2;
-        return ans;
-    }
+class Performance {
+    public int yearsOfExperience;
+    public ArrayList<Integer> rating = new ArrayList<Integer>();
 } 
 public class aman{
     public static void main(String[] args){
-        Shape s;
-        s = new Triangle();
-        s.a = 4;
-        s.b = 3;
-        s.c = 5;
-        s.h = 4;
-        s.p = 9;
-        System.out.println("printing sides of triangle");
-        System.out.println(s.numberOfSides());
-        System.out.println("printing area of triangle");
-        System.out.println(s.calculateArea());
+        System.out.println("Please Enter The Total Number Of Employees");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Performance[] arr;
+        arr = new Performance[n];
 
-        s = new Square();
-        s.a = 4;
-        s.b = 3;
-        s.c = 5;
-        s.h = 4;
-        s.p = 9;
-        System.out.println("printing sides of square");
-        System.out.println(s.numberOfSides());
-        System.out.println("printing area of square");
-        System.out.println(s.calculateArea());
+        for(int i=0;i<n;i++){
+            arr[i] = new Performance();
+            System.out.println("Enter Year Of Experience");
+            int yearOfExperience = sc.nextInt();
+            arr[i].yearsOfExperience = yearOfExperience;
+            for(int j=0;j<yearOfExperience;j++){
+                System.out.println("Enter rating: ");
+                int rating = sc.nextInt();
+                arr[i].rating.add(rating);
+            }                      
+        }
 
-        s = new Pentagon();
-        s.a = 4;
-        s.b = 3;
-        s.c = 5;
-        s.h = 4;
-        s.p = 9;
-        System.out.println("printing sides of pentagon");
-        System.out.println(s.numberOfSides());
-        System.out.println("printing area of pentagon");
-        System.out.println(s.calculateArea());
+        // calculating average
+        int totalRating = 0,totalYearOfExperience = 0;
 
-        s = new Hexagon();
-        s.a = 4;
-        s.b = 3;
-        s.c = 5;
-        s.h = 4;
-        s.p = 9;
-        System.out.println("printing sides of hexagon");
-        System.out.println(s.numberOfSides());
-        System.out.println("printing area of hexagon");
-        System.out.println(s.calculateArea());
+        for(int i=0;i<n;i++){
+            totalYearOfExperience += arr[i].yearsOfExperience;
 
-
-        s = new Octagon();
-        s.a = 4;
-        s.b = 3;
-        s.c = 5;
-        s.h = 4;
-        s.p = 9;
-        System.out.println("printing sides of octagon");
-        System.out.println(s.numberOfSides());
-        System.out.println("printing area of octagon");
-        System.out.println(s.calculateArea());
-
+            for(int j=0;j<arr[i].yearsOfExperience;j++){
+                totalRating += arr[i].rating.get(j);
+            }
+        }
+        int averagePerformance = (totalRating / totalYearOfExperience);
+        System.out.println("Therefore Average Performance Index is : " + averagePerformance);
     }
 }
