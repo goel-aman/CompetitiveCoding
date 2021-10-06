@@ -42,6 +42,7 @@ using namespace std;
 // arr.length is even.
 // 1 <= arr[i] <= 105
 
+
 class Solution {
 public:
     int minSetSize(vector<int>& arr) {
@@ -50,7 +51,24 @@ public:
         for(int i=0;i<arrLength;i++){
             um[arr[i]]++;
         }
+        int halfSize = (arrLength%2 == 0) ? (arrLength/2) : ((arrLength/2) + 1);
+        vector<pair<int,int>> array;
+        for(auto &var : um){
+            array.push_back({var.second,var.first});
+        }   
 
-        
+        sort(array.begin(),array.end());
+        reverse(array.begin(),array.end());
+        int length = array.size();
+        int sum = 0;
+        int index = 0;
+        for(int i=0;i<length;i++){
+            sum += array[i].first;
+            if(sum >= halfSize){
+                index = i;
+                break;
+            }
+        }
+        return index + 1;
     }
 };
