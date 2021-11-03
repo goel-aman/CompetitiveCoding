@@ -18,11 +18,44 @@ int main(){
                 highestIndex = i;
             }
         }
+                
+        map<ll,set<ll>> um;
 
-        unordered_map<ll,unordered_set<
-
-        for(int i=0;i<=sqrt(highestNumber);i++){
-            if()
+        for(int i=2;i<=sqrt(highestNumber);i++){
+            for(int j=0;j<n;j++){
+                if(arr[j]%i == 0 && highestNumber%i == 0){
+                    if(arr[j]%i == 0){
+                        um[i].insert(j);
+                    }
+                    if(arr[j]%(highestNumber/i) == 0){
+                        um[highestNumber/i].insert(j);
+                    }
+                    
+                }
+            }
         }
+        
+        unordered_map<int,bool> visited;
+        visited[highestIndex] = true;
+        cout<<highestNumber<<" ";
+        // cout<<endl;
+        vector<int> ans;
+        for(auto it = um.rbegin();it != um.rend();++it){
+            // cout<<"value is : "<<it->first<<endl;
+            for(auto it2 = it->second.rbegin();it2 != it->second.rend();it2++){
+                if(!visited.count(*it2)){
+                    cout<<arr[*it2]<<" ";
+                    visited[*it2] = true;
+                }
+            }
+        }
+        
+        for(int i=0;i<n;i++){
+            if(!visited.count(i)){
+                cout<<arr[i]<<" ";
+                visited[i] = true;
+            }
+        }
+        cout<<endl;
     }
 }
