@@ -119,6 +119,8 @@ https://leetcode.com/problems/my-calendar-ii/
 https://leetcode.com/problems/number-of-wonderful-substrings/
 https://leetcode.com/problems/bulb-switcher-iv/
 https://leetcode.com/problems/find-the-winner-of-an-array-game/
+https://leetcode.com/problems/number-of-visible-people-in-a-queue/
+
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
@@ -132,6 +134,7 @@ https://leetcode.com/problems/unique-binary-search-trees-ii/
 https://leetcode.com/problems/find-duplicate-subtrees/
 https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/
 https://leetcode.com/problems/trim-a-binary-search-tree/
+
 
 /* Unknown Topics */
 https://leetcode.com/problems/gray-code/
@@ -147,8 +150,10 @@ https://leetcode.com/problems/3sum-closest/
 https://leetcode.com/problems/3sum-with-multiplicity/
 https://leetcode.com/problems/bitwise-ors-of-subarrays/
 
+
 /* Based on prefix Sum */
 https://leetcode.com/problems/can-make-palindrome-from-substring/
+
 
 /** BackTracking Based Question **/
 https://leetcode.com/problems/iterator-for-combination/
