@@ -40,83 +40,29 @@ using namespace std;
 
 class Solution {
 public:
-    bool isAbOrBa(string s){
-        int sLength = s.length();
-        for(int i=0;i<sLength - 1;i++){
-            if(s.substr(i,2) == "ab" || s.substr(i,2) == "ba"){
-                return true;
+    string manipulation(string s,char a,char b){
+        string ret;
+        for(int i=0;i<s.length();i++){
+            char current = s[i];
+            if(!ret.empty() && ret.back() == a && current == b){
+                ret.pop_back();
+            }else{
+                ret.push_back(current);
             }
         }
-        return false;
-    }
-
-    bool isAb(string s){
-        int sLength = s.length();
-        for(int i=0;i<sLength - 1;i++){
-            if(s.substr(i,2) == "ab"){
-                return true;
-            }
-        }
-    }
-
-    bool isBa(string s){
-        int sLength = s.length();
-        for(int i=0;i<sLength - 1;i++){
-            if(s.substr(i,2) == "ba"){
-                return true;
-            }
-        }
+        return ret;
     }
 
     int maximumGain(string s, int x, int y) {
-        int ans = 0;
-        while(isAbOrBa){
-            if(x > y){
-                while(isAb(s)){
-                    int index = -1;
-                    for(int i=0;i<s.length() - 1;i++){
-                        if(s.substr(i,2) == "ab"){
-                            index = i;
-                            break;
-                        }
-                    }
-                    s = s.substr(0,index) + s.substr(index + 2);
-                    ans += x;
-                }
+        int sLength = s.length();
+        char a = 'a', b = 'b';
+        if(y > x){
+            swap(a,b);
+            swap(x,y);
+        }        
 
-                while(isBa(s)){
-                    int index = -1;
-                    for(int i=0;i<s.length() - 1;i++){
-                        if(s.substr(i,2) == "ba"){
-                            index = i;
-                            break;
-                        }
-                    }
-                    s = s.substr(0,index) + s.substr(index + 2);
-                }
-            }else{
-                while(isBa(s)){
-                    int index = -1;
-                    for(int i=0;i<s.length() - 1;i++){
-                        if(s.substr(i,2) == "ba"){
-                            index = i;
-                            break;
-                        }
-                    }
-                    s = s.substr(0,index) + s.substr(index + 2);
-                }
-                while(isAb(s)){
-                    int index = -1;
-                    for(int i=0;i<s.length() - 1;i++){
-                        if(s.substr(i,2) == "ab"){
-                            index = i;
-                            break;
-                        }
-                    }
-                    s = s.substr(0,index) + s.substr(index + 2);
-                    ans += x;
-                }
-            } 
-        }
+        string first = manipulation(s,a,b),second = manipulation(first,b,a);
+        int ans = ((s.size() - first.size())/2) * x + ((first.size() - second.size())/2) * y;
+        return ans;
     }
 };
