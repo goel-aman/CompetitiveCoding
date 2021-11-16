@@ -13,7 +13,8 @@ using namespace std;
 // int pop() removes and returns the most frequent 
 // element in the stack.
 // If there is a tie for the most frequent element,
-//  the element closest to the stack's top is removed and returned.
+//  the element closest to the stack's top is 
+// removed and returned.
  
 // Example 1:
 // Input
@@ -43,8 +44,10 @@ using namespace std;
 // Constraints:
 // 0 <= val <= 109
 // At most 2 * 104 calls will be made to push and pop.
-// It is guaranteed that there will be at least one element in the 
+// It is guaranteed that there will be at least 
+// one element in the 
 // stack before calling pop.
+
 
 class FreqStack {
     int maxFreq = 0;
@@ -57,17 +60,18 @@ public:
     
     void push(int val) {
         frequency[val]++;
-        
+        if(frequency[val] > maxFreq) { maxFreq = frequency[val]; }
+        maxStack[frequency[val]].push(val);
+        return ;     
     }
     
     int pop() {
-        
+        int val = maxStack[maxFreq].top();
+        maxStack[maxFreq].pop();
+        if(maxStack[maxFreq].empty()){
+            maxFreq--;
+        }
+        frequency[val]--;
+        return val;
     }
 };
-
-/**
- * Your FreqStack object will be instantiated and called as such:
- * FreqStack* obj = new FreqStack();
- * obj->push(val);
- * int param_2 = obj->pop();
- */
