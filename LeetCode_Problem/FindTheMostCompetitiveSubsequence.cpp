@@ -45,7 +45,9 @@ public:
             while(numsLength - i - 1 + st.size() >= k && !st.empty() && st.top() > nums[i]){
                 st.pop();
             }
-            st.push(nums[i]);
+            if(st.size() < k){
+                st.push(nums[i]);
+            }
         }
         vector<int> ans;
         while(!st.empty()){
@@ -53,7 +55,6 @@ public:
             st.pop();
         }
         reverse(ans.begin(),ans.end());
-        vector<int> ret(ans.begin(),ans.begin() + k);
-        return ret;
+        return ans;
     }
 };
