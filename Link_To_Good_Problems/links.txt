@@ -52,6 +52,7 @@ https://leetcode.com/problems/non-decreasing-array/
 https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/
 
 /* Good Math / Problem Solving Based Problem / array Based */
+https://leetcode.com/problems/minimum-numbers-of-function-calls-to-make-target-array/
 https://leetcode.com/problems/valid-parenthesis-string/
 https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference/
 https://leetcode.com/problems/minimize-deviation-in-array/
