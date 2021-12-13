@@ -28,7 +28,8 @@ using namespace std;
 // Constraints:
 // -231 <= x <= 231 - 1
  
-// Follow up: Could you solve it without cclass Solution {
+// Follow up: Could you solve it without c
+class Solution {
 public:
     bool isPalindrome(int x) {
         string number = to_string(x);
@@ -40,5 +41,5 @@ public:
         }
         return true;
     }
-};onverting the integer to a string?
+};
 
