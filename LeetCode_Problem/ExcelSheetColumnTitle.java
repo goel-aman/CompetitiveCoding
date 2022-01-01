@@ -17,7 +17,6 @@ public class ExcelSheetColumnTitle {
             value = nextNumber;
         }
         
-        
         return ans;
     }
 }
