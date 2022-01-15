@@ -13,5 +13,9 @@
         "string": "cpp",
         "vector": "cpp",
         "*.tcc": "cpp"
-    }
+    },
+    "java.project.sourcePaths": [
+        "LeetCode_Problem",
+        "Codeforces_Problems/Codeforces_Round_765"
+    ]
 }
