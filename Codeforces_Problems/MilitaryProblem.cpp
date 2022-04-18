@@ -31,6 +31,7 @@ int main(){
 
         graph[supervisor].push_back(i);
     }
+    
     for(ll i=1;i<=numberOfOfficers;i++){
         sort(graph[i].begin(),graph[i].end());
     }
