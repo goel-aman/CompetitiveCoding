@@ -74,6 +74,5 @@ public:
     
     int depthSum(vector<NestedInteger>& nestedList) {
         return sumDepth(nestedList,1);
-        
     }
 };
