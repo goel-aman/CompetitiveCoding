@@ -33,6 +33,28 @@ using namespace std;
 class Solution {
 public:
     int validSubarrays(vector<int>& nums) {
+        stack<int> st;
+        int sum = 0;
         int numsLength = nums.size();
+        for(int i=numsLength - 1;i>=0;i--){
+            bool gotIt = false;
+            while(st.size() > 0){
+                if(nums[st.top()] >= nums[i]){
+                    st.pop();
+                    continue;
+                }else{
+                    int difference = st.top() - i;
+                    sum += difference;
+                    st.push(i);
+                    gotIt = true;
+                    break;
+                }
+            }
+            if(gotIt == false){
+                sum += (numsLength - i);
+            }
+            st.push(i);
+        }
+        return sum;
     }
 };
