@@ -86,7 +86,7 @@ public:
             Interval inter;
             inter.start = finalIntervals[i][1];
             inter.end = finalIntervals[i + 1][0];
-            ret.push_back(inter);          
+            ret.push_back(inter);       
         }
         return ret;
     }
