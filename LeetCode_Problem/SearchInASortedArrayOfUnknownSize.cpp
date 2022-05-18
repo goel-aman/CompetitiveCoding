@@ -31,14 +31,14 @@ using namespace std;
 // -104 <= secret[i], target <= 104
 // secret is sorted in a strictly increasing order.
 
-/**
- * // This is the ArrayReader's API interface.
- * // You should not implement it, or speculate about its implementation
- * class ArrayReader {
- *   public:
- *     int get(int index);
- * };
- */
+// /**
+//  * // This is the ArrayReader's API interface.
+//  * // You should not implement it, or speculate about its implementation
+ class ArrayReader {
+    public:
+      int get(int index);
+ };
+//  */
 
 class Solution {
 public:
