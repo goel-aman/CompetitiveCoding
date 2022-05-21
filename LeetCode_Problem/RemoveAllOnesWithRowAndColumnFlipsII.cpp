@@ -79,8 +79,6 @@ public:
             }
         }
         
-        
-        
         int row = positionsOfOne[index][0];
         int col = positionsOfOne[index][1];
         
