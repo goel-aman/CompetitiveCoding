@@ -89,4 +89,4 @@ public:
         cout<<"distanceOfP is : "<<distanceOfP<<" and distance of Q is : "<<distanceOfQ<<endl;
         return (distanceOfP + distanceOfQ);
     }
-};
+};""
