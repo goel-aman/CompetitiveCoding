@@ -41,14 +41,10 @@ using namespace std;
 // 0 <= bottomLeft[1] <= topRight[1] <= 1000
 // topRight != bottomLeft
 
-/**
- * // This is Sea's API interface.
- * // You should not implement it, or speculate about its implementation
- * class Sea {
- *   public:
- *     bool hasShips(vector<int> topRight, vector<int> bottomLeft);
- * };
- */
+class Sea {
+public:
+    bool hasShips(vector<int> topRight, vector<int> bottomLeft);
+};
 
 class Solution {
 public:
