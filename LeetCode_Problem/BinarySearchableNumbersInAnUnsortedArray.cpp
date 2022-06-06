@@ -60,7 +60,8 @@ using namespace std;
 // -105 <= nums[i] <= 105
 // All the values of nums are unique.
  
-// Follow-up: If nums has duplicates, would you modify your algorithm? If so, how?
+// Follow-up: If nums has duplicates, would you modify your algorithm?
+//  If so, how?
 
 class Solution {
 public:
@@ -86,7 +87,7 @@ public:
                 }
             }
         }
-        
+
         return count;
     }
 };
