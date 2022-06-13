@@ -50,36 +50,27 @@ using namespace std;
 // 1 <= boxes.length, warehouse.length <= 105
 // 1 <= boxes[i], warehouse[i] <= 109
 
-
 class Solution {
 public:
     int maxBoxesInWarehouse(vector<int>& boxes, vector<int>& warehouse) {
-        
-        sort(boxes.begin(),boxes.end());
+        int boxesLength = boxes.size();
         int warehouseLength = warehouse.size();
-        int minValue = warehouse[0];
+        int minVal = warehouse[0];
         for(int i=0;i<warehouseLength;i++){
-            minValue = min(warehouse[i],minValue);
-            warehouse[i] = minValue;
-            cout<<warehouse[i]<<" ";
-        }
-        cout<<endl;
-        int count = 0;
+            minVal = min(minVal,warehouse[i]);
+            warehouse[i] = minVal;
+        }        
 
-        for(int index = warehouseLength - 1;index >= 0;index--){
-            auto position = lower_bound(boxes.begin(),boxes.end(),warehouse[index]);
-            if((*position) == warehouse[index]){
-                count++;
-                boxes.erase(position);
-            }
-            else if(position == boxes.begin()){
-                break;
-            }else{
-                position--;
-                if(*position < warehouse[index]){
+        sort(boxes.begin(),boxes.end());
+        int count = 0,index = 0;
+        for(int i=warehouseLength - 1;i>=0;i--){
+            if(index < boxesLength){
+                 if(boxes[index] <= warehouse[i]){
                     count++;
-                    boxes.erase(position);
-                }
+                    index++;
+                 }
+            }else{
+                break;
             }
         }
         return count;
