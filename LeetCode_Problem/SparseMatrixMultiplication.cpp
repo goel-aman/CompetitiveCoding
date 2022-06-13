@@ -48,7 +48,7 @@ public:
                     sum += (mat1[i][k] * mat2[k][j]);
                 }
                 ans[i][j] = sum;
-            }
+            } 
         }
         return ans;
     }
