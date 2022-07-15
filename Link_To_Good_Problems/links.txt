@@ -124,6 +124,7 @@ https://leetcode.com/problems/find-the-winner-of-an-array-game/
 https://leetcode.com/problems/number-of-visible-people-in-a-queue/
 https://leetcode.com/problems/minimum-moves-to-make-array-complementary/
 https://leetcode.com/problems/reverse-words-in-a-string-ii/
+https://leetcode.com/problems/maximum-number-of-points-with-cost/
 
 /* Tree Problems */
 https://leetcode.com/problems/count-complete-tree-nodes/
